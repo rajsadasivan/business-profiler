@@ -1,0 +1,148 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.companyRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+}
+
+.companyName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.addressRow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.timestamp {
+  font-size: 11px;
+  color: var(--text-dim);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.body {
+  padding: 20px 24px;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--error);
+  font-size: 14px;
+  padding: 12px 16px;
+  background: rgba(239, 68, 68, 0.08);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.markdown {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.markdown :global(h2) {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.markdown :global(h2:first-child) {
+  margin-top: 0;
+}
+
+.markdown :global(p) {
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.markdown :global(ul),
+.markdown :global(ol) {
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.markdown :global(li) {
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.markdown :global(strong) {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.markdown :global(em) {
+  color: var(--text-muted);
+}
+
+.markdown :global(code) {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 13px;
+  font-family: 'Consolas', monospace;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
